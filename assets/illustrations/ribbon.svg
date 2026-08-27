@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" width="100%" height="100%" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="goldThreadPath" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(216, 192, 154, 0)" />
+      <stop offset="20%" stop-color="rgba(216, 192, 154, 0.6)" />
+      <stop offset="50%" stop-color="rgba(184, 153, 104, 0.9)" />
+      <stop offset="80%" stop-color="rgba(216, 192, 154, 0.6)" />
+      <stop offset="100%" stop-color="rgba(216, 192, 154, 0)" />
+    </linearGradient>
+  </defs>
+  <!-- Flowing Golden Satin Thread -->
+  <path d="M 0 100 Q 360 20 720 100 T 1440 100" fill="none" stroke="url(#goldThreadPath)" stroke-width="2" stroke-dasharray="8 4" />
+  <circle cx="360" cy="60" r="3" fill="#d8c09a" />
+  <circle cx="1080" cy="140" r="3" fill="#d8c09a" />
+</svg>

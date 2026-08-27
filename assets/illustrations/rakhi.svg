@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Champagne Gold Metallic Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f0e3"/>
+      <stop offset="25%" stop-color="#e6d2b5"/>
+      <stop offset="50%" stop-color="#d8c09a"/>
+      <stop offset="75%" stop-color="#b89968"/>
+      <stop offset="100%" stop-color="#8c7147"/>
+    </linearGradient>
+
+    <!-- Deep Gold Metallic Gradient -->
+    <linearGradient id="goldDeepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8c09a"/>
+      <stop offset="100%" stop-color="#8c6f42"/>
+    </linearGradient>
+
+    <!-- Pearl Gemstone Radial Gradient -->
+    <radialGradient id="pearlGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fffdf8"/>
+      <stop offset="75%" stop-color="#f3eee5"/>
+      <stop offset="100%" stop-color="#d8c09a"/>
+    </radialGradient>
+
+    <!-- Soft Blush Radial Gradient -->
+    <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#faf0e6"/>
+      <stop offset="60%" stop-color="#f8e7e1"/>
+      <stop offset="100%" stop-color="#e8c5c8"/>
+    </radialGradient>
+
+    <!-- Subtle Lavender Gradient -->
+    <radialGradient id="lavenderGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ede7f6"/>
+      <stop offset="70%" stop-color="#e1d7f5"/>
+      <stop offset="100%" stop-color="#cbbbf0"/>
+    </radialGradient>
+
+    <!-- Soft Gold Aura Glow Filter -->
+    <radialGradient id="auraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(216, 192, 154, 0.5)"/>
+      <stop offset="50%" stop-color="rgba(248, 231, 225, 0.3)"/>
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Gold Aura Backdrop -->
+  <circle cx="250" cy="250" r="220" fill="url(#auraGlow)" />
+
+  <!-- Left Champagne Gold Thread -->
+  <g id="left-thread">
+    <path d="M 0,250 C 70,230 130,270 200,250" fill="none" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 0,252 C 70,232 130,272 200,252" fill="none" stroke="rgba(255, 255, 255, 0.7)" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Thread Tassels / Beads -->
+    <circle cx="60" cy="244" r="5" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+    <circle cx="120" cy="256" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+    <circle cx="170" cy="248" r="7" fill="url(#blushGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+  </g>
+
+  <!-- Right Champagne Gold Thread -->
+  <g id="right-thread">
+    <path d="M 300,250 C 370,230 430,270 500,250" fill="none" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 300,252 C 370,232 430,272 500,252" fill="none" stroke="rgba(255, 255, 255, 0.7)" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Thread Tassels / Beads -->
+    <circle cx="330" cy="248" r="7" fill="url(#blushGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+    <circle cx="380" cy="256" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+    <circle cx="440" cy="244" r="5" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+  </g>
+
+  <!-- CENTRAL RAKHI EMBLEM MEDALLION -->
+  <g id="central-medallion" transform="translate(0,0)">
+    
+    <!-- Outer Gold Filigree Scallop Ring -->
+    <circle cx="250" cy="250" r="110" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="8 4"/>
+    <circle cx="250" cy="250" r="102" fill="url(#blushGrad)" opacity="0.35"/>
+    <circle cx="250" cy="250" r="100" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+
+    <!-- 12 Pearl Beads Ring -->
+    <g id="pearl-ring">
+      <circle cx="250" cy="150" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="300" cy="163" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="337" cy="200" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="350" cy="250" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="337" cy="300" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="300" cy="337" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="250" cy="350" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="200" cy="337" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="163" cy="300" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="150" cy="250" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="163" cy="200" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+      <circle cx="200" cy="163" r="6" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1"/>
+    </g>
+
+    <!-- 8 Floral Lotus Petals -->
+    <g id="petals">
+      <!-- Petal 1 (Top) -->
+      <path d="M 250,250 Q 225,170 250,160 Q 275,170 250,250 Z" fill="url(#blushGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 2 (Top Right) -->
+      <path d="M 250,250 Q 306,186 313,213 Q 286,306 250,250 Z" fill="url(#lavenderGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 3 (Right) -->
+      <path d="M 250,250 Q 330,225 340,250 Q 330,275 250,250 Z" fill="url(#blushGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 4 (Bottom Right) -->
+      <path d="M 250,250 Q 306,314 287,321 Q 286,306 250,250 Z" fill="url(#lavenderGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 5 (Bottom) -->
+      <path d="M 250,250 Q 225,330 250,340 Q 275,330 250,250 Z" fill="url(#blushGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 6 (Bottom Left) -->
+      <path d="M 250,250 Q 194,314 187,287 Q 214,194 250,250 Z" fill="url(#lavenderGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 7 (Left) -->
+      <path d="M 250,250 Q 170,225 160,250 Q 170,275 250,250 Z" fill="url(#blushGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Petal 8 (Top Left) -->
+      <path d="M 250,250 Q 194,186 213,179 Q 214,194 250,250 Z" fill="url(#lavenderGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+    </g>
+
+    <!-- Inner 8-Point Gold Star Filigree -->
+    <g id="star-filigree">
+      <circle cx="250" cy="250" r="62" fill="url(#pearlGrad)" stroke="url(#goldGrad)" stroke-width="2.5"/>
+      <polygon points="250,195 264,236 305,250 264,264 250,305 236,264 195,250 236,236" fill="url(#goldGrad)" opacity="0.85"/>
+      <polygon points="250,205 260,240 295,250 260,260 250,295 240,260 205,250 240,240" fill="url(#goldDeepGrad)" opacity="0.6"/>
+    </g>
+
+    <!-- Centerpiece Gemstone & Sparkle -->
+    <g id="center-gem">
+      <circle cx="250" cy="250" r="28" fill="url(#blushGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+      <circle cx="250" cy="250" r="20" fill="url(#pearlGrad)" stroke="url(#goldDeepGrad)" stroke-width="1.5"/>
+      <circle cx="244" cy="244" r="6" fill="#ffffff" opacity="0.8"/>
+      <!-- Center Star Sparkle -->
+      <path d="M 250,238 L 253,247 L 262,250 L 253,253 L 250,262 L 247,253 L 238,250 L 247,247 Z" fill="url(#goldGrad)"/>
+    </g>
+
+  </g>
+</svg>
