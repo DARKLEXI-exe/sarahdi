@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarah Di — Happy Raksha Bandhan 🤍</title>
+  <meta name="description" content="A handcrafted luxury Raksha Bandhan story experience for Sarah Di featuring real memories, golden thread journey, mini games, and secret surprises.">
+
+  <!-- Google Fonts: Cormorant Garamond, Inter, & Alex Brush -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Elegant Loading Experience Overlay -->
+  <div id="loading-screen" class="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-thread-spinner"></div>
+      <p class="loading-text">Something special is being tied together...</p>
+    </div>
+  </div>
+
+  <!-- Custom Soft Glowing Cursor (Desktop Only) -->
+  <div id="cursor-dot" class="cursor-element"></div>
+  <div id="cursor-ring" class="cursor-element"></div>
+
+  <!-- Background Ambient Canvas for Soft Champagne Particle Dust & Petals -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Floating Background Glass Orbs for Depth -->
+  <div class="floating-orbs-container">
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+  </div>
+
+  <!-- Floating Glass Progress Indicator (Top Right) -->
+  <nav class="floating-progress-bar glass-pill" aria-label="Story Progress">
+    <span class="progress-step" id="progress-text">01 / 12</span>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  </nav>
+
+  <!-- Secret Easter Egg Star (Bottom Left Corner) -->
+  <div id="secret-easter-egg" class="secret-star" title="✦" role="button" tabindex="0" aria-label="Secret Easter Egg">✦</div>
+  <div id="easter-egg-toast" class="easter-egg-toast glass-card hidden">
+    <p>Okay Sarah Di... you found the secret 👀<br><em>You're officially too good at this! 🥂</em></p>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+
+    <!-- 01 — HERO SECTION -->
+    <section id="hero" class="fullscreen-section hero-section" data-step="1">
+      <div class="hero-ambient-mesh">
+        <div class="mesh-orb orb-blush"></div>
+        <div class="mesh-orb orb-cream"></div>
+        <div class="mesh-orb orb-lavender"></div>
+      </div>
+
+      <img src="assets/illustrations/botanical-1.svg" class="hero-botanical botanical-left" alt="" aria-hidden="true">
+      <img src="assets/illustrations/botanical-1.svg" class="hero-botanical botanical-right" alt="" aria-hidden="true">
+
+      <div class="section-container hero-container">
+        <span class="eyebrow fade-in-delay-1" id="hero-eyebrow">A little something for someone very special</span>
+        <h1 class="hero-heading fade-in-delay-2" id="hero-heading">SARAH DI</h1>
+        <div class="gold-rule fade-in-delay-3"></div>
+        <p class="hero-subtitle fade-in-delay-3" id="hero-subtitle">Happy Raksha Bandhan 🤍</p>
+        
+        <div class="hero-action fade-in-delay-4">
+          <button id="btn-hero-open" class="btn-glass primary-btn">
+            <span id="hero-btn-text">OPEN YOUR SURPRISE →</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint fade-in-delay-4">
+        <span class="scroll-dot"></span>
+      </div>
+    </section>
+
+    <!-- CONNECTING THREAD & CHECKPOINT 1 -->
+    <div class="connected-thread-wrapper">
+      <div class="thread-checkpoint-node" data-node="1">
+        <span class="node-dot"></span>
+        <span class="node-label">01 — MEMORY</span>
+      </div>
+      <img src="assets/illustrations/ribbon.svg" class="connected-thread-svg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 02 — INTRO SECTION -->
+    <section id="intro" class="flow-section intro-section reveal-on-scroll" data-step="2">
+      <div class="section-container intro-container">
+        <div class="ambient-blush-orb"></div>
+        <img src="assets/illustrations/botanical-2.svg" class="intro-wreath-icon" alt="" aria-hidden="true">
+        <blockquote class="serif-quote" id="intro-quote">
+          <span class="quote-line line-1" id="intro-line1">Some people are given to us by life</span>
+          <span class="quote-line line-2" id="intro-line2">and some become family by heart</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONNECTING THREAD & CHECKPOINT 2 -->
+    <div class="connected-thread-wrapper flip-x">
+      <div class="thread-checkpoint-node" data-node="2">
+        <span class="node-dot"></span>
+        <span class="node-label">02 — LAUGHTER</span>
+      </div>
+      <img src="assets/illustrations/ribbon.svg" class="connected-thread-svg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 03 — EDITORIAL MEMORY GALLERY ("Little pieces of us") -->
+    <section id="memories" class="flow-section memories-section reveal-on-scroll" data-step="3">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">CHAPTERS &amp; MOMENTS</span>
+          <h2 class="section-title">Little pieces of us</h2>
+          <p class="section-subtitle">Some memories deserve more than a place in the camera roll.</p>
+        </div>
+
+        <div id="memory-timeline" class="editorial-memory-collage">
+          <!-- Dynamically populated from script.js personalContent.memories -->
+        </div>
+
+        <!-- Secret Star Hidden in Gallery -->
+        <div class="secret-star-wrapper">
+          <span id="secret-photo-star" class="secret-photo-star" title="✦ Click for a secret photo">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECTING THREAD & CHECKPOINT 3 -->
+    <div class="connected-thread-wrapper">
+      <div class="thread-checkpoint-node" data-node="3">
+        <span class="node-dot"></span>
+        <span class="node-label">03 — BOND</span>
+      </div>
+      <img src="assets/illustrations/ribbon.svg" class="connected-thread-svg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 04 — MINI GAME #1: TIE THE RAKHI -->
+    <section id="game-rakhi" class="flow-section game-section reveal-on-scroll" data-step="4">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">INTERACTIVE MOMENT 01</span>
+          <h2 class="section-title">Let's Tie the Rakhi</h2>
+          <p class="section-subtitle">Some bonds are meant to be tied.</p>
+        </div>
+
+        <div class="game-card glass-card-strong rakhi-drag-container">
+          <div class="rakhi-drag-stage">
+            <div id="wrist-target" class="wrist-target-zone">
+              <div class="target-pulse"></div>
+              <span class="target-label">Place Rakhi Here</span>
+            </div>
+
+            <div id="draggable-rakhi" class="draggable-rakhi-item" role="button" tabindex="0" aria-label="Drag or tap to tie Rakhi">
+              <img src="assets/illustrations/rakhi.svg" alt="Rakhi Emblem">
+            </div>
+          </div>
+
+          <div class="game-controls">
+            <button id="btn-tap-tie" class="btn-glass secondary-btn">Tap to Tie Rakhi 🤍</button>
+          </div>
+
+          <div id="rakhi-success-box" class="game-success-message hidden">
+            <h3 class="success-title">Tied with love 🤍</h3>
+            <button id="btn-next-rakhi" class="btn-glass primary-btn">Continue →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — APPRECIATION CARDS -->
+    <section id="appreciation" class="flow-section appreciation-section reveal-on-scroll" data-step="5">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">GRATITUDE</span>
+          <h2 class="section-title">Things I Appreciate About You</h2>
+        </div>
+
+        <div id="appreciation-grid" class="asymmetric-appreciation-grid">
+          <!-- Dynamically populated from script.js personalContent.appreciation -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECTING THREAD & CHECKPOINT 4 -->
+    <div class="connected-thread-wrapper flip-x">
+      <div class="thread-checkpoint-node" data-node="4">
+        <span class="node-dot"></span>
+        <span class="node-label">04 — RAKHI</span>
+      </div>
+      <img src="assets/illustrations/ribbon.svg" class="connected-thread-svg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 06 — MINI GAME #2: FIND THE LITTLE THINGS -->
+    <section id="game-hidden" class="flow-section game-section reveal-on-scroll" data-step="6">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">INTERACTIVE MOMENT 02</span>
+          <h2 class="section-title">Find the Little Things</h2>
+          <p class="section-subtitle">There are 5 little things hidden in this scrapbook...</p>
+        </div>
+
+        <div class="game-card glass-card-strong hidden-search-stage">
+          <div class="found-counter-bar">
+            <span>Found: <strong id="found-count">0</strong> / 5</span>
+          </div>
+
+          <div class="scrapbook-hidden-canvas">
+            <div class="hidden-item" data-id="1" style="top: 25%; left: 18%;" title="Tiny Heart">♡</div>
+            <div class="hidden-item" data-id="2" style="top: 65%; left: 78%;" title="Gold Star">✦</div>
+            <div class="hidden-item" data-id="3" style="top: 35%; left: 82%;" title="Flower">❀</div>
+            <div class="hidden-item" data-id="4" style="top: 75%; left: 22%;" title="Thread">〰</div>
+            <div class="hidden-item" data-id="5" style="top: 50%; left: 48%;" title="Note">📜</div>
+          </div>
+
+          <div id="hidden-tooltip" class="hidden-item-tooltip glass-card hidden"></div>
+
+          <div id="hidden-success-box" class="game-success-message hidden">
+            <h3 class="success-title">You found them all! 🤍</h3>
+            <p class="success-sub">Just like all the little things that make Sarah... Sarah.</p>
+            <button id="btn-next-hidden" class="btn-glass primary-btn">Keep Going →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 — RAKHI CENTERPIECE -->
+    <section id="rakhi" class="flow-section rakhi-section reveal-on-scroll" data-step="7">
+      <div class="section-container rakhi-container">
+        <div class="rakhi-orb-wrapper">
+          <div class="rakhi-aura"></div>
+          <div class="glass-orb">
+            <img src="assets/illustrations/rakhi.svg" class="rakhi-svg-img" alt="Luxury Rakhi Emblem">
+          </div>
+        </div>
+
+        <div class="rakhi-text-box">
+          <p class="serif-quote rakhi-quote">
+            <span class="rakhi-line line-a" id="rakhi-line1">A thread is small</span>
+            <span class="rakhi-line line-b" id="rakhi-line2">but what it represents isn't</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECTING THREAD & CHECKPOINT 5 -->
+    <div class="connected-thread-wrapper">
+      <div class="thread-checkpoint-node" data-node="5">
+        <span class="node-dot"></span>
+        <span class="node-label">05 — LETTER</span>
+      </div>
+      <img src="assets/illustrations/ribbon.svg" class="connected-thread-svg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 08 — MINI GAME #3: MEMORY MATCH -->
+    <section id="game-memory-match" class="flow-section game-section reveal-on-scroll" data-step="8">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">INTERACTIVE MOMENT 03</span>
+          <h2 class="section-title">Memory Match</h2>
+          <p class="section-subtitle">Match the pairs of shared memories.</p>
+        </div>
+
+        <div class="game-card glass-card-strong memory-match-stage">
+          <div id="memory-cards-grid" class="memory-match-grid">
+            <!-- Dynamically populated 6 cards -->
+          </div>
+
+          <div id="memory-match-success" class="game-success-message hidden">
+            <h3 class="success-title">Look at you remembering everything 😂</h3>
+            <button id="btn-next-match" class="btn-glass primary-btn">Continue Story →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 — INTERACTIVE PAPER & GLASS ENVELOPE -->
+    <section id="letter-section" class="flow-section letter-section reveal-on-scroll" data-step="9">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow" id="letter-eyebrow">A LETTER FOR SARAH DI</span>
+          <h2 class="section-title">Words From The Heart</h2>
+        </div>
+
+        <div class="envelope-wrapper">
+          <div id="interactive-envelope" class="physical-envelope" role="button" tabindex="0" aria-label="Open letter for Sarah Di">
+            <div class="envelope-light-leak"></div>
+            <div class="envelope-back"></div>
+            <div class="envelope-paper-preview">
+              <div class="preview-handwriting">Dearest Sarah Di...</div>
+            </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap">
+              <div class="wax-seal">
+                <span class="seal-initials">SD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="envelope-action">
+            <button id="btn-open-letter" class="btn-glass primary-btn">
+              <span id="letter-btn-text">Open letter ✉️</span>
+              <span class="btn-glow"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER OVERLAY MODAL -->
+    <div id="letter-modal" class="letter-modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-letter-title">
+      <div class="modal-backdrop" id="letter-modal-backdrop"></div>
+      <div class="letter-card-container frosted-paper-card">
+        <button id="btn-close-letter" class="btn-close-modal" aria-label="Close letter">&times;</button>
+        <div class="letter-inner-paper">
+          <div class="letter-header">
+            <span class="letter-date" id="letter-date-display">Raksha Bandhan 2026</span>
+            <h3 class="letter-salutation" id="modal-letter-title">Dearest Sarah Di,</h3>
+          </div>
+          <div class="letter-body-content" id="letter-body-paragraphs">
+            <!-- Dynamically populated from script.js -->
+          </div>
+          <div class="letter-footer">
+            <p class="letter-closing" id="letter-closing-text">With all my love,</p>
+            <p class="letter-signature handwritten-script" id="letter-signature-text">Your Brother, Vighnesh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONNECTING THREAD & CHECKPOINT 6 -->
+    <div class="connected-thread-wrapper flip-x">
+      <div class="thread-checkpoint-node" data-node="6">
+        <span class="node-dot"></span>
+        <span class="node-label">06 — SURPRISE</span>
+      </div>
+      <img src="assets/illustrations/ribbon.svg" class="connected-thread-svg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 10 — PHOTO MOMENTS SHOWCASE -->
+    <section id="photo-moments" class="flow-section photo-moments-section reveal-on-scroll" data-step="10">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">GALLERY</span>
+          <h2 class="section-title">Precious Moments</h2>
+        </div>
+
+        <div class="editorial-photo-showcase">
+          <div class="photo-frame center-featured-frame">
+            <img id="photo-hero-center" src="" alt="Featured Sister Portrait" loading="lazy">
+          </div>
+          <div class="photo-frame side-frame frame-left">
+            <img id="photo-moment-1" src="" alt="Photo Moment 1" loading="lazy">
+          </div>
+          <div class="photo-frame side-frame frame-right">
+            <img id="photo-moment-2" src="" alt="Photo Moment 2" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 — MINI GAME #4: UNLOCK THE SURPRISE -->
+    <section id="game-unlock" class="flow-section game-section reveal-on-scroll" data-step="11">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-eyebrow">INTERACTIVE MOMENT 04</span>
+          <h2 class="section-title">One Last Little Challenge</h2>
+          <p class="section-subtitle">Select the 3 symbols in order to unlock the surprise lock.</p>
+        </div>
+
+        <div class="game-card glass-card-strong unlock-stage">
+          <div class="lock-display">
+            <div id="lock-icon" class="lock-icon">🔒</div>
+            <div class="selected-symbols-row">
+              <span id="sym-slot-1" class="sym-slot">?</span>
+              <span id="sym-slot-2" class="sym-slot">?</span>
+              <span id="sym-slot-3" class="sym-slot">?</span>
+            </div>
+          </div>
+
+          <div class="symbol-buttons-row">
+            <button class="btn-symbol glass-card" data-sym="♡">♡</button>
+            <button class="btn-symbol glass-card" data-sym="✦">✦</button>
+            <button class="btn-symbol glass-card" data-sym="∞">∞</button>
+          </div>
+
+          <div id="unlock-success-box" class="game-success-message hidden">
+            <h3 class="success-title">You unlocked it! 🔓✨</h3>
+            <p class="success-sub">Okay... you really deserve the surprise.</p>
+            <button id="btn-next-unlock" class="btn-glass primary-btn">Open Surprise →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 — SURPRISE TREASURE BOX -->
+    <section id="surprise" class="flow-section surprise-section reveal-on-scroll" data-step="12">
+      <div class="section-container surprise-container">
+        <span class="eyebrow" id="surprise-eyebrow">Wait… there's one more thing</span>
+        <h2 class="serif-subheading">A Hidden Secret</h2>
+        
+        <div class="surprise-action-wrapper">
+          <div class="surprise-ambient-glow"></div>
+          <button id="btn-trigger-surprise" class="btn-glass surprise-capsule-btn">
+            <span id="surprise-btn-text" class="surprise-btn-label">I knew you would click this <span class="emoji-wrapper">👀<span class="emoji-sparkle-micro">✦</span></span></span>
+            <span class="btn-glow"></span>
+            <span class="btn-reflection-streak"></span>
+          </button>
+        </div>
+
+        <div id="surprise-reveal-card" class="surprise-card frosted-paper-card hidden">
+          <div class="surprise-image-wrapper">
+            <img id="surprise-photo" src="" alt="Sister Special Surprise Certificate" loading="lazy">
+          </div>
+          <div class="surprise-content">
+            <h3 class="surprise-title" id="surprise-title">The Official Sibling Oath 📜</h3>
+            <p class="surprise-text" id="surprise-text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 — FINAL EMOTIONAL SCREEN & GOLDEN THREAD PAYOFF -->
+    <section id="final-screen" class="fullscreen-section final-section reveal-on-scroll" data-step="13">
+      <div class="final-ambient-glow"></div>
+      <div class="section-container final-container">
+        <!-- Converging Golden Thread mandala centerpiece -->
+        <div class="final-converging-thread">
+          <div id="final-rakhi-emblem" class="final-rakhi-emblem" role="button" tabindex="0" title="Click me ✦">
+            <img src="assets/illustrations/rakhi.svg" alt="Final Rakhi Symbol">
+          </div>
+        </div>
+
+        <div class="final-text-sequence">
+          <p class="thread-payoff-line line-payoff-1">Some bonds are tied once.</p>
+          <p class="thread-payoff-line line-payoff-2">Some last forever.</p>
+          <h2 class="final-heading" id="final-heading">Happy Raksha Bandhan, Sarah Di 🤍</h2>
+          <p class="final-subheading" id="final-subheading">No matter how much we grow up,<br>I'll always be your annoying little brother.</p>
+          <p class="final-signature handwritten-script" id="final-signature">Made with love, memories &amp; a little too much effort — Vighnesh</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLASSMORPHIC PHOTO LIGHTBOX MODAL -->
+  <div id="photo-lightbox-modal" class="lightbox-modal-overlay" aria-hidden="true" role="dialog" aria-label="Photo Lightbox Preview">
+    <div id="lightbox-backdrop" class="modal-backdrop"></div>
+    <div class="lightbox-container glass-card">
+      <button id="btn-close-lightbox" class="btn-close-modal" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-image-wrapper">
+        <img id="lightbox-image" src="" alt="Expanded Memory Photo">
+      </div>
+      <div class="lightbox-info">
+        <h3 id="lightbox-title" class="lightbox-title"></h3>
+        <p id="lightbox-caption" class="lightbox-caption handwritten-script"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECRET PHOTO OVERLAY MODAL -->
+  <div id="secret-photo-modal" class="lightbox-modal-overlay" aria-hidden="true" role="dialog" aria-label="Secret Photo Overlay">
+    <div id="secret-modal-backdrop" class="modal-backdrop"></div>
+    <div class="lightbox-container glass-card secret-photo-card">
+      <button id="btn-close-secret" class="btn-close-modal" aria-label="Close Secret Photo">&times;</button>
+      <div class="secret-photo-header">
+        <span class="section-eyebrow">SECRET UNLOCKED ✦</span>
+        <h3 class="secret-photo-heading">Some memories don't need a caption.</h3>
+      </div>
+      <div class="lightbox-image-wrapper">
+        <img id="secret-photo-img" src="" alt="Special Sister Memory">
+      </div>
+      <p class="secret-photo-subtitle handwritten-script">Just wanted to keep this one here. 🤍</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
